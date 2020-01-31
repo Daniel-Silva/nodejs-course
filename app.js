@@ -1,7 +1,8 @@
 const express = require('express')();
+express.set('view engine', 'ejs');
 
 express.get('/', (request, response) => {
-	response.send('<html><body>PAGIA INICIAL</body></html>');
+	response.render('');
 });
 
 express.listen(3000, () => {
