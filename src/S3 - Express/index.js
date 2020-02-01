@@ -4,6 +4,10 @@ express.get('/', (request, response) => {
 	response.send('<html><body>PAGIA INICIAL</body></html>');
 });
 
+express.get('/contato', (request, response) => {
+	response.send('CONTATO');
+});
+
 express.get('/blog', (request, response) => {
 	response.send('BLOG');
 });
