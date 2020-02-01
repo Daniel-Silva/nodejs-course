@@ -8,8 +8,9 @@ express.get('/contato', (request, response) => {
 	response.send('<html><body>PAGIA CONTATO</body></html>');
 });
 
-express.get('/blog', (request, response) => {
-	response.send('<html><body>PAGIA BLOG</body></html>');
+express.get('/blog/modulo', (request, response) => {
+	const blog = request.query['assunto'] || '';
+	response.send(`<html><body>PAGIA BLOG ${blog}</body></html>`);
 });
 
 express.get('/welcome/:nome?', (request, response) => {
