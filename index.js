@@ -1,19 +1,28 @@
-const express = require('express')();
+const express = require('express');
+const app = express();
 
-express.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
-express.get('/', (req, resp) => {
+app.get('/', (req, resp) => {
 	let name = 'Daniel Silva';
 	let lang = 'Javascript';
-	let bool = false;
+	let bool = true;
+
+	const products = [
+		{ name: 'Doritos', value: 3.14 },
+		{ name: 'Coca-cola', value: 5.45 },
+		{ name: 'Leite', value: 2.45 }
+	];
 
 	resp.render('index', {
 		name,
 		lang,
-		bool
+		bool,
+		products
 	});
 });
 
-express.listen(3000, () => {
+app.listen(3000, () => {
 	console.log('Conectado');
 });

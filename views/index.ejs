@@ -24,6 +24,12 @@
             <p>TESTE</p>
         <% } %>
 
-        <script src=""></script>
+        <ul>
+            <% products.forEach((product) => { %>
+                <li>Produto: <%= product.name %>, Preço: <%= product.value %></li>
+            <% }) %>
+        </ul>
+
+        <script src="" async></script>
     </body>
 </html>
