@@ -15,7 +15,15 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h1>GUIA DE PERGUNTAS</h1>
+        <h1> <%= name %> </h1>
+        <h4> <%= lang %></h4>
+
+        <% if(bool) { %>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium cum voluptatum, quaerat quidem sequi reiciendis suscipit quo maiores porro odio natus eos laborum quae! Minima temporibus repudiandae quam facilis perferendis.</p>
+        <% } else { %>
+            <p>TESTE</p>
+        <% } %>
+
         <script src=""></script>
     </body>
 </html>
